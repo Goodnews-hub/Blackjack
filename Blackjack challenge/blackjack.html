@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>black-Jack</title>
+    <link rel="stylesheet" href="blackjack.css" />
+</head>
+<body>
+
+    <div class="n0">
+
+        <div class="n1">
+            <h2>Challenge 1: Your Age in Days</h2>
+        </div>
+
+        <div class="n2">
+
+            <div class="n2.1">
+                <button class="btn btn-primary" onclick="ageInDays()">click me</button>
+            </div>
+
+            <div class="n2.2">
+                <button class="btn btn-danger" onclick="reset(this)">reset</button>
+            </div>
+        </div>
+        <div class="P2">
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+    <div class="n31">
+        <h2>Challenge 2: Image Generator</h2>
+             
+               <p>
+                (N.B: Internet connection required)
+               </p>
+             
+            <div class="n2">
+                <div>
+                    <button class="btn btn-success" onclick="generateImage(this)">Generate Cat</button>
+                </div>
+
+                <div>
+                     <button class="btn btn-danger" onclick="restart(this)">Remove Cat</button>
+                </div>
+                
+            </div>
+           
+
+        <div class="container-n" id="flex-cat-gen">
+             
+        </div>
+    </div>
+
+    <div class="n4">
+        <h2>Challenge 3: Rocks, Papers, Scissors</h2>
+
+        <div class="n41" id="solution-div">
+            <img id="rock" src="rock.png" height=150 width=150 alt="" onclick="rpsGame(this)">
+            <img id="paper" src="paper.png" height=150 width=150 alt="" onclick="rpsGame(this)">
+            <img id="scissors" src="scissors.jpeg" height=150 width=150 alt="" onclick="rpsGame(this)">
+        </div>
+        
+    </div>
+
+    <div class="n5">
+        <h2 id="change-my-color">Challenge 4: Change the color of all buttons</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="reset">Reset</option>
+                </select>
+            </form>
+            <button class="btn btn-primary">Wee!</button>
+            <button class="btn btn-danger">Yahoo!</button>
+            <button class="btn btn-warning">Google!</button>
+            <button class="btn btn-success">Facebook!</button>
+        </div>
+    </div>
+
+    <div class="n5">
+        <h2>Challenge 5: Blackjack</h2>
+        <h3><span id ="blackjack-result">Let's play</span></h3>
+               
+        <div class="flex-blackjack-row-1">
+            <div id="your-box">
+                <h2>You: <span id="your-blackjack-result">0</span></h2>
+            </div>
+
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+
+        </div>
+        <div class="flex-blackjack-row-2">
+        <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-Hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="blackjack-Stand-button">Stand</button>
+                <button class="btn-lg btn-danger mr-2" id="blackjack-Deal-button">Deal</button>
+            </div>
+        </div>
+        <div class="flex-blackjack-row-3">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draws</th>
+                </tr>
+                <tr>
+                    <td><span id="Win">0</span></td>
+                    <td><span id="Losses">0</span></td>
+                    <td><span id="Draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="blackjack.js"></script>
+</body>
+</html>
